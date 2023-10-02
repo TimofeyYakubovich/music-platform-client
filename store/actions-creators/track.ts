@@ -26,7 +26,7 @@ export const fetchTrack = () => {
 export const searchTracks = (query: string) => {
     return async (dispatch: Dispatch<TrackAction>) => {
         try {
-            console.log(query)
+            // console.log(query)
             // const response = await axios.get('http://localhost:5000/tracks/search?query=' + query)
             // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/search?query=' + query)
             // const response = await axios.get('https://music-platform-server-omega.vercel.app/tracks/search?query=8')
@@ -34,7 +34,7 @@ export const searchTracks = (query: string) => {
             // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks?count=20&offset=1')
             // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + `tracks/search?query=${query}`)
             // const response = await axios.get(`${process.env.MUSIC_PLATFORM_SERVER}tracks/search?query=` + query)
-            console.log(response)
+            // console.log(response)
             dispatch({type: TrackActionTypes.FETCH_TRACKS, payload: response.data})
         } catch (e) {
             dispatch({

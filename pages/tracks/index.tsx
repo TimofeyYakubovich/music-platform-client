@@ -116,7 +116,7 @@ import { useDispatch } from 'react-redux';
  export const getServerSideProps = wrapper.getServerSideProps(async ({store}) => {
     // создае новый объект диспатча
     // dispatch достаем из store но преобразовываем его к типу NextThunkDispath
-    console.log('getServerSideProps')
+    // console.log('getServerSideProps')
     const dispatch = store.dispatch as NextThunkDispatch
     await dispatch(await fetchTrack())
     // return {
