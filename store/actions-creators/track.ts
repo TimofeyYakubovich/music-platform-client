@@ -28,8 +28,8 @@ export const searchTracks = (query: string) => {
         try {
             console.log(query)
             // const response = await axios.get('http://localhost:5000/tracks/search?query=' + query)
-            const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/search?query=' + query)
-            // const response = await axios.get('https://music-platform-server-omega.vercel.app/tracks/search?query=8')
+            // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/search?query=' + query)
+            const response = await axios.get('https://music-platform-server-omega.vercel.app/tracks/search?query=8')
             // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks?count=20&offset=1')
             // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + `tracks/search?query=${query}`)
             // const response = await axios.get(`${process.env.MUSIC_PLATFORM_SERVER}tracks/search?query=` + query)
