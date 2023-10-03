@@ -16,9 +16,9 @@ const TrackPage = ({serverTrack}) => { // сдесь не будем испол�
     const addComment = async () => {
         try {
             // const response = await axios.post('http://localhost:5000/tracks/comment', {
-            // const response = await axios.post(process.env.MUSIC_PLATFORM_SERVER + 'tracks/comment', {
+            const response = await axios.post(process.env.MUSIC_PLATFORM_SERVER + 'tracks/comment', {
                 // console.log(username.value, text.value, track._id)
-            const response = await axios.post('https://music-platform-server-omega.vercel.app/tracks/comment', {
+            // const response = await axios.post('https://music-platform-server-omega.vercel.app/tracks/comment', {
                 username: username.value,
                 text: text.value,
                 trackId: track._id
@@ -99,8 +99,7 @@ export default TrackPage;
 // дестрктуризацией достаем params с помощью него можно получить id из юрл
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
     // const response = await axios.get('http://localhost:5000/tracks/' + params.id)
-    // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/' + params.id)
-    const response = await axios.get('https://music-platform-server-omega.vercel.app/tracks/' + params.id)
+    const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/' + params.id)
     return {
         props: {
             serverTrack: response.data
