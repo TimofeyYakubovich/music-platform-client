@@ -16,8 +16,9 @@ const TrackPage = ({serverTrack}) => { // сдесь не будем испол�
     const addComment = async () => {
         try {
             // const response = await axios.post('http://localhost:5000/tracks/comment', {
-            // const response = await axios.post(process.env.MUSIC_PLATFORM_SERVER + 'tracks/comment', {
-            const response = await axios.post('https://music-platform-server-omega.vercel.app/tracks/comment', {
+            const response = await axios.post(process.env.MUSIC_PLATFORM_SERVER + 'tracks/comment', {
+                // console.log(username.value, text.value, track._id)
+            // const response = await axios.post('https://music-platform-server-omega.vercel.app/tracks/comment', {
                 username: username.value,
                 text: text.value,
                 trackId: track._id
