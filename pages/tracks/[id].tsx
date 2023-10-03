@@ -99,7 +99,8 @@ export default TrackPage;
 // дестрктуризацией достаем params с помощью него можно получить id из юрл
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
     // const response = await axios.get('http://localhost:5000/tracks/' + params.id)
-    const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/' + params.id)
+    // const response = await axios.get(process.env.MUSIC_PLATFORM_SERVER + 'tracks/' + params.id)
+    const response = await axios.get('https://music-platform-server-omega.vercel.app/tracks/' + params.id)
     return {
         props: {
             serverTrack: response.data
